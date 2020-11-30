@@ -1,0 +1,21 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    letter-spacing: 20px;
+    color: #3098dd;
+}
+
+h1 {
+    color: #354b63;
+}
+
+#border {
+    border-left: 4px solid #bdc7cf;
+    border-spacing:  4px;
+}
+
+#line {
+    border-top: 2px solid #bdc7cf
+}
