@@ -1,0 +1,297 @@
+
+body {
+  background-color: #FFF9E8;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color:#FFF9E8;
+    position: ab;
+    max-width: 100%;
+    height:auto;
+    
+  }
+  
+  li {
+    float: left ;
+    text-align: center;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align:left;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: 'Playfair-Display-Bold';
+    font-weight: 700;
+    font-size: 150%;
+
+  }
+  
+
+  li a:hover {
+    background-color: #FFF9E8;
+    
+  }
+
+  @media only screen and (max-width: 767px)
+
+{}
+.row {
+margin-top: 0px;
+background-color: #FFF9E8;
+  }
+
+.leftside, .rightside {
+    height: 100vh;
+    width: 100%
+
+}
+
+
+
+
+    .leftside, .rightside {
+        height: 100vh;
+    }
+
+
+.leftside{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #FFF9E8;
+    font-family: 'Playfair-Display-Bold';
+    font-weight: 900;
+    font-size: 300%;
+
+}
+
+
+.rightside{
+    background-color: #FFF9E8; 
+    background-image: 1.jpg;
+}
+
+
+.mySlider {
+  position : relative;
+  display : block;
+  overflow : hidden;
+  width : 100%;
+  max-width : 100vw;
+  height : 100vh;
+  max-height : 100%;
+  margin : 0 auto;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 0;
+  transition: transform 1600ms;
+  transform: scale(1);
+}
+
+.slide_img_01 {
+  background : url('1.jpg') no-repeat center;
+  background-size: cover;
+  left: 0;
+}
+
+.slide_img_02 {
+  background : url('2.jpg') no-repeat center;
+  background-size : cover;
+  left: 100%
+}
+
+.slide_img_03 {
+  background : url('3.jpg') no-repeat center;
+  background-size : cover;
+  left: 100%;
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  z-index: 55;
+}
+
+.control label svg {
+  width : 48px;
+  height : 48px;
+  fill : #fff;
+  stroke : currentColor;
+  stroke-width : 0;
+}
+
+.control label svg:hover {
+  transition : all .2s ease;
+  fill : #000;
+}
+
+.control label {
+  z-index: 0;
+  display: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.control label:hover { opacity: 1.0; }
+
+.next { right: 1%; }
+
+.previous { left: 1%; }
+The CSS for the bottom pagination bullets.
+
+.slider-pagination {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.slider-pagination label {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  margin: 0 2px;
+  border: solid 1px rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.slide-radio1:checked ~ .next .numb2, .slide-radio2:checked ~ .next .numb1, .slide-radio2:checked ~ .previous .numb1, .slide-radio1:checked ~ .previous .numb2 {
+  display: block;
+  z-index: 1
+}
+
+.slide-radio1:checked ~ .slider-pagination .page1, .slide-radio2:checked ~ .slider-pagination .page2 { background: rgba(255,255,255,1) }
+Apply the slide animation to the carousel using CSS3 transforms.
+
+.slide-radio1:checked ~ .slider { transform: translateX(0%); }
+
+.slide-radio2:checked ~ .slider { transform: translateX(-100%); }
+Make the carousel fully responsive.
+
+
+
+.mySlider {
+  position : relative;
+  width : 100%;
+  height: 400px;
+}
+
+.slider > div { padding: 0 2% }
+
+.control {
+  position: absolute;
+  top: 60%;
+  margin-top: -24px;
+  z-index: 55;
+}
+
+.control label svg {
+  width : 32px;
+  height : 32px;
+  fill : #fff;
+  stroke : currentColor;
+  stroke-width : 0;
+}
+
+
+
+
+
+.container {
+  position: absolute;
+
+  column-count: 5;
+  padding: 200px;
+
+}
+
+.image {
+  display: inline-block;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+img{
+  width: 100%;
+  transition: 0.25s ease-in-out;
+}
+
+.image:hover img{
+  transform: scale(1.1);
+}
+
+h1{
+  position: absolute; 
+  padding: 5px;
+  margin: 5px;
+  font-family: 'Playfair-Display-Bold';
+  font-weight: 600;
+  font-size: 18px;
+  background: #333332;
+  color: #ffffff;
+  border-radius: 5px;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.25 ease-in-out ;
+}
+
+.image:hover h1{
+  opacity: 0.5;
+}
+
+@media screen and (max-width:1024px){
+  h1{
+    font-size: 18px
+  }
+}
+
+@media screen and (max-width:768px){
+  .container{
+   column-count: 3;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .container{
+   column-count: 2;
+  }
+  h1{
+    font-size: 12px
+  }
+}
+
+@media screen and (max-width: 375px){
+  .container{
+   column-count: 1;
+  }
+  h1{
+    font-size: 15px
+  }
+}
+
+
